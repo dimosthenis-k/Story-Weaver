@@ -3,9 +3,12 @@ package unipi.projects.unipiaudiostories;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.SharedPreferences;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -21,13 +24,16 @@ import com.google.firebase.storage.StorageReference;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class MainActivity2 extends AppCompatActivity {
     TextView messageOutput;
     ImageView downloadedPicture;
     FirebaseDatabase database;
     DatabaseReference reference1, reference2, reference3, reference4, reference5;
-
     StorageReference storageReference;
 
     @Override
@@ -35,6 +41,8 @@ public class MainActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
         messageOutput = findViewById(R.id.textView);
+
+        // establishing firebase connection and references
         database = FirebaseDatabase.getInstance();
         reference1 = database.getReference("message1");
         reference2 = database.getReference("message2");
@@ -43,9 +51,13 @@ public class MainActivity2 extends AppCompatActivity {
         reference5 = database.getReference("message5");
         downloadedPicture = findViewById(R.id.imageView);
         storageReference = FirebaseStorage.getInstance().getReference();
+
+        // added vertical scrollbar to story text
+        messageOutput.setMovementMethod(new ScrollingMovementMethod());
+
     }
 
-    public void story1 (View view) {
+    public void story1(View view) {
         reference1.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -72,7 +84,7 @@ public class MainActivity2 extends AppCompatActivity {
         }
     }
 
-    public void story2 (View view) {
+    public void story2(View view) {
         reference2.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -99,7 +111,7 @@ public class MainActivity2 extends AppCompatActivity {
         }
     }
 
-    public void story3 (View view) {
+    public void story3(View view) {
         reference3.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -126,7 +138,7 @@ public class MainActivity2 extends AppCompatActivity {
         }
     }
 
-    public void story4 (View view) {
+    public void story4(View view) {
         reference4.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -153,7 +165,7 @@ public class MainActivity2 extends AppCompatActivity {
         }
     }
 
-    public void story5 (View view) {
+    public void story5(View view) {
         reference5.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -175,7 +187,7 @@ public class MainActivity2 extends AppCompatActivity {
                     downloadedPicture.setImageBitmap(BitmapFactory.decodeFile(localFile.getAbsolutePath()));
                 }
             });
-        } catch (IOException e) {
+        } catch(IOException e) {
             e.printStackTrace();
         }
     }
