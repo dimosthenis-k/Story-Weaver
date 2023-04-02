@@ -33,6 +33,9 @@
     <string name="fourth_story_name_eng">The photographer fox</string>
     <string name="fourth_story_name_jp"></string>
 
+    <!-- stop story button-->
+    <string name="stop_running_story">Παύση ιστορίας</string>
+
     <string name="fifth_story_name_gr">Τα τρία γουρουνάκια</string>
     <string name="fifth_story_name_eng">Three little piggies</string>
     <string name="fifth_story_name_jp"></string>

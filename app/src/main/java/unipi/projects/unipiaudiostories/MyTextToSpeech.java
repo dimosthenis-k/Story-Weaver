@@ -23,6 +23,4 @@ public class MyTextToSpeech {
     public void speak(String message) {
         textToSpeech.speak(message, TextToSpeech.QUEUE_ADD, null, null);
     }
-
-
 }

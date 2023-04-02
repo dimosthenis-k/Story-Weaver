@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.SharedPreferences;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
 import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
@@ -27,6 +28,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 public class MainActivity2 extends AppCompatActivity {
@@ -35,6 +37,11 @@ public class MainActivity2 extends AppCompatActivity {
     FirebaseDatabase database;
     DatabaseReference reference1, reference2, reference3, reference4, reference5;
     StorageReference storageReference;
+
+    Button stopStoryButton;
+
+    TextToSpeech textToSpeech;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,11 +56,29 @@ public class MainActivity2 extends AppCompatActivity {
         reference3 = database.getReference("message3");
         reference4 = database.getReference("message4");
         reference5 = database.getReference("message5");
+        stopStoryButton = findViewById(R.id.stopStoryButton);
         downloadedPicture = findViewById(R.id.imageView);
         storageReference = FirebaseStorage.getInstance().getReference();
 
         // added vertical scrollbar to story text
         messageOutput.setMovementMethod(new ScrollingMovementMethod());
+
+        // Initialize TextToSpeech object
+        textToSpeech = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int status) {
+                // Check initialization status
+                if (status == TextToSpeech.SUCCESS) {
+                    // Set language and other parameters
+                    textToSpeech.setLanguage(Locale.US);
+                    textToSpeech.setSpeechRate(1.0f);
+                    textToSpeech.setPitch(1.0f);
+
+                }
+            }
+        });
+
+
 
     }
 
@@ -62,6 +87,8 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 messageOutput.setText(snapshot.getValue().toString());
+                textToSpeech.stop();
+                textToSpeech.speak(snapshot.getValue().toString(),TextToSpeech.QUEUE_ADD,null,null);
             }
 
             @Override
@@ -69,6 +96,8 @@ public class MainActivity2 extends AppCompatActivity {
                 messageOutput.setText(error.getMessage());
             }
         });
+
+
 
         StorageReference imageRef1 = storageReference.child("king.jpg");
         try {
@@ -89,6 +118,8 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 messageOutput.setText(snapshot.getValue().toString());
+                textToSpeech.stop();
+                textToSpeech.speak(snapshot.getValue().toString(),TextToSpeech.QUEUE_ADD,null,null);
             }
 
             @Override
@@ -116,6 +147,8 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 messageOutput.setText(snapshot.getValue().toString());
+                textToSpeech.stop();
+                textToSpeech.speak(snapshot.getValue().toString(),TextToSpeech.QUEUE_ADD,null,null);
             }
 
             @Override
@@ -143,6 +176,8 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 messageOutput.setText(snapshot.getValue().toString());
+                textToSpeech.stop();
+                textToSpeech.speak(snapshot.getValue().toString(),TextToSpeech.QUEUE_ADD,null,null);
             }
 
             @Override
@@ -170,6 +205,8 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 messageOutput.setText(snapshot.getValue().toString());
+                textToSpeech.stop();
+                textToSpeech.speak(snapshot.getValue().toString(),TextToSpeech.QUEUE_ADD,null,null);
             }
 
             @Override
@@ -177,6 +214,12 @@ public class MainActivity2 extends AppCompatActivity {
                 messageOutput.setText(error.getMessage());
             }
         });
+
+        //
+        public void stopStory(View view) {
+            
+
+        }
 
         StorageReference imageRef5 = storageReference.child("pigs.jpg");
         try {
