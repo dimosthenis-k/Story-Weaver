@@ -4,7 +4,7 @@
 
 <hr>
 <br>
-Collaborators: <a href="https://github.com/pnliaskos"> Panagiotis-Nikolaos Liaskos </a> <a href="https://github.com/christinetzani"> Christina Tzani </a>
+Collaborators: <a href="https://github.com/pnliaskos"> Panagiotis-Nikolaos Liaskos </a>
 <br>
 Technologies: Java, Firebase, Android Studio 
 <br>
