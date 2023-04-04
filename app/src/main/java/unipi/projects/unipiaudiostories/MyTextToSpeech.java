@@ -13,7 +13,7 @@ public class MyTextToSpeech {
         @Override
         public void onInit(int status) {
 
-            textToSpeech.setLanguage(Locale.US);
+            textToSpeech.setLanguage(Locale.ENGLISH);
             textToSpeech.setSpeechRate(1.0f);
             textToSpeech.setPitch(1.0f);
         }
