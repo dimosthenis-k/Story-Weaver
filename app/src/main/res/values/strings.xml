@@ -2,63 +2,122 @@
     <string name="app_name">Unipi Audio Stories</string>
 
     <!-- welcome messages -->
-    <string name="welcome_message_gr">Καλώς ήρθατε στα Unipi Audio Stories!</string>
     <string name="welcome_message_eng">Welcome to Unipi Audio Stories!</string>
+    <string name="welcome_message_gr">Καλώς ήρθατε στα Unipi Audio Stories!</string>
+    <string name="welcome_message_jp">Unipi オーディオ ストーリーズへようこそ!</string>
 
     <!-- CHOOSE LANGUAGE TEXTVIEW-->
     <string name="choose_language_textview_eng">Choose a user interface language</string>
+    <string name="choose_language_textview_gr">Επιλέξτε μια γλώσσα διεπαφής χρήστη</string>
+    <string name="choose_language_textview_jp">ユーザー インターフェイス言語の選択</string>
 
     <!--CHOOSE LANGUAGE BUTTONS-->
     <!--CHOOSE ENGLISH-->
-    <string name="choose_english_language_button_en">English</string>
+    <string name="choose_english_language_button_eng">English</string>
+    <string name="choose_english_language_button_gr">Αγγλικά</string>
+    <string name="choose_english_language_button_jp">英語</string>
+
     <!--CHOOSE GREEK-->
-    <string name="choose_greek_language_button_en">Greek</string>
+    <string name="choose_greek_language_button_eng">Greek</string>
+    <string name="choose_greek_language_button_gr">Ελληνικά</string>
+    <string name="choose_greek_language_button_jp">ギリシャ語</string>
 
     <!--CHOOSE JAPANESE-->
-    <string name="choose_japanese_language_button_en">Japanese</string>
+    <string name="choose_japanese_language_button_eng">Japanese</string>
+    <string name="choose_japanese_language_button_gr">Ιαπωνικά</string>
+    <string name="choose_japanese_language_button_jp">日本</string>
 
 
     <!-- Story button messages -->
-    <string name="story_button_eng">Go to sleep</string>
+    <string name="story_button_eng">Enter the fairy tale world</string>
+    <string name="story_button_gr">Μπείτε στον κόσμο του παραμυθιού</string>
+    <string name="story_button_jp">おとぎ話の世界に入る</string>
 
     <!-- Settings button  -->
     <string name="settings_button_eng">Story settings</string>
+    <string name="settings_button_gr">Ρυθμίσεις ιστορίας</string>
+    <string name="settings_button_jp">ストーリー設定</string>
 
     <!-- Stats button  -->
     <string name="stats_button_eng">Statistics</string>
+    <string name="stats_button_gr">Στατιστικά</string>
+    <string name="stats_button_jp">統計</string>
 
     <!-- Info  button -->
     <string name="info_button_eng">Information</string>
+    <string name="info_button_gr">Πληροφορίες</string>
+    <string name="info_button_jp">情報</string>
+
+    <!--Team information @ activity_info-->
+    <string name="team_info_eng">Karampinas Dimosthenis
+        Liaskos Panagiotis
+        Tzani Christine</string>
+    <string name="team_info_gr">Καραμπίνας Δημοσθένης
+        Λιάσκος Παναγιώτης
+        Τζανή Χριστίνα</string>
+    <string name="team_info_jp">デモステネスのカービン銃
+        リアスコス・パナギオティス
+        ジャニ・クリスティーナ</string>
 
     <!-- story names in supported languages -->
-    <string name="first_story_name_gr">Ο Βασιλιάς και το αλάτι</string>
     <string name="first_story_name_eng">The king and the salt</string>
-    <string name="first_story_name_jp"></string>
+    <string name="first_story_name_gr">Ο Βασιλιάς και το αλάτι</string>
+    <string name="first_story_name_jp">王様と塩</string>
 
-    <string name="second_story_name_gr">Η μαγική χύτρα</string>
     <string name="second_story_name_eng">The enchanted pot</string>
-    <string name="second_story_name_jp"></string>
+    <string name="second_story_name_gr">Η μαγική χύτρα</string>
+    <string name="second_story_name_jp">魔法の鍋</string>
 
-    <string name="third_story_name_gr">Ο τοσοδούλης</string>
     <string name="third_story_name_eng">Tom Thumb</string>
-    <string name="third_story_name_jp"></string>
+    <string name="third_story_name_gr">Ο τοσοδούλης</string>
+    <string name="third_story_name_jp">トッサー</string>
 
-    <string name="fourth_story_name_gr">Η αλεπού φωτογράφος</string>
     <string name="fourth_story_name_eng">The photographer fox</string>
-    <string name="fourth_story_name_jp"></string>
-
-    <!-- stop story button-->
-    <string name="stop_running_story">Παύση ιστορίας</string>
-    <string name="stop_running_story_eng">Stop story</string>
+    <string name="fourth_story_name_gr">Η αλεπού φωτογράφος</string>
+    <string name="fourth_story_name_jp">キツネの写真家</string>
 
     <string name="fifth_story_name_gr">Τα τρία γουρουνάκια</string>
     <string name="fifth_story_name_eng">Three little piggies</string>
+    <string name="fifth_story_name_jp">三匹の豚</string>
 
+    <!-- stop story button -->
+    <string name="stop_running_story_eng">Stop story</string>
+    <string name="stop_running_story_gr">Παύση ιστορίας</string>
+    <string name="stop_running_story_jp">ストーリーブレイク</string>
 
-    <string name="fifth_story_name_jp"></string>
+    <!-- statistics title @ activity_stats -->
+    <string name="stats_title_eng">Statistics</string>
+    <string name="stats_title_gr">Στατιστικά</string>
+    <string name="stats_title_jp">統計</string>
+
+    <!-- 1st story statistics @ activity_stats -->
+    <string name="stats_1st_eng">1st</string>
+    <string name="stats_1st_gr">1η</string>
+    <string name="stats_1st_jp">1位</string>
+
+    <!-- 2nd story statistics @ activity_stats -->
+    <string name="stats_2nd_eng">2nd</string>
+    <string name="stats_2nd_gr">2η</string>
+    <string name="stats_2nd_jp">2位</string>
+
+    <!-- 3rd story statistics @ activity_stats -->
+    <string name="stats_3rd_eng">3rd</string>
+    <string name="stats_3rd_gr">3η</string>
+    <string name="stats_3rd_jp">3位</string>
+
+    <!-- 4th story statistics @ activity_stats -->
+    <string name="stats_4th_eng">4th</string>
+    <string name="stats_4th_gr">4η</string>
+    <string name="stats_4th_jp">4位</string>
+
+    <!-- 5th story statistics @ activity_stats -->
+    <string name="stats_5th_eng">5th</string>
+    <string name="stats_5th_gr">5η</string>
+    <string name="stats_5th_jp">5位</string>
 
     <string name="title_activity_story">StoryActivity</string>
 
+    <!-- Don't translate!!! -->
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>

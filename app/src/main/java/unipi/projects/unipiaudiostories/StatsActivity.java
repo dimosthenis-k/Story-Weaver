@@ -2,7 +2,6 @@ package unipi.projects.unipiaudiostories;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -14,7 +13,7 @@ public class StatsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stats);
 
-        sampleTextview = findViewById(R.id.sampleText);
+        sampleTextview = findViewById(R.id.stats_title);
 
     }
 }
