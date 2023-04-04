@@ -6,13 +6,49 @@
     android:layout_height="match_parent"
     tools:context=".StoryActivity">
 
-    <TextView
-        android:id="@+id/storyTextView"
-        android:layout_width="239dp"
-        android:layout_height="74dp"
-        android:text="TextView"
+    <Button
+        android:id="@+id/chooseJapaneseLanguageButton"
+        android:layout_width="243dp"
+        android:layout_height="60dp"
+        android:text="@string/choose_japanese_language_button_en"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.586" />
+
+    <Button
+        android:id="@+id/chooseGreekLanguageButton"
+        android:layout_width="243dp"
+        android:layout_height="60dp"
+        android:text="@string/choose_greek_language_button_en"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.449" />
+
+    <TextView
+        android:id="@+id/chooseLanguageTextView"
+        android:layout_width="283dp"
+        android:layout_height="55dp"
+        android:text="@string/choose_language_textview_eng"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.08" />
+
+    <Button
+        android:id="@+id/chooseEglishLanguageButton"
+        android:layout_width="243dp"
+        android:layout_height="60dp"
+        android:text="@string/choose_english_language_button_en"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3" />
 </androidx.constraintlayout.widget.ConstraintLayout>

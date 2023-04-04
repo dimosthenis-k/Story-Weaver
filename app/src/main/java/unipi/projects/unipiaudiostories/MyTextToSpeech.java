@@ -12,7 +12,10 @@ public class MyTextToSpeech {
     private TextToSpeech.OnInitListener initListener = new android.speech.tts.TextToSpeech.OnInitListener() {
         @Override
         public void onInit(int status) {
-            textToSpeech.setLanguage(Locale.ENGLISH);
+
+            textToSpeech.setLanguage(Locale.US);
+            textToSpeech.setSpeechRate(1.0f);
+            textToSpeech.setPitch(1.0f);
         }
     };
 

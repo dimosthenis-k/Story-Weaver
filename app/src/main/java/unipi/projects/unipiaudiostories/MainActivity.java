@@ -42,12 +42,12 @@ public class MainActivity extends AppCompatActivity {
 
     // MainActivity button events | creating new activities and passing information
     public void goToStory(View view){
-        Intent intent = new Intent(this,StoryActivity.class);
+        Intent intent = new Intent(this,MainActivity2.class);
         startActivity(intent);
     }
 
     public void goToSettings(View view){
-        Intent intent = new Intent(this,MainActivity2.class);
+        Intent intent = new Intent(this,StoryActivity.class);
         startActivity(intent);
     }
 
