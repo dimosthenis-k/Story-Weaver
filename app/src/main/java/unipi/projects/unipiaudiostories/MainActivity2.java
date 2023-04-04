@@ -33,10 +33,11 @@ import java.util.Locale;
 import java.util.Map;
 
 public class MainActivity2 extends AppCompatActivity {
-    TextView messageOutput;
+    TextView messageOutput, year;
     ImageView downloadedPicture;
     FirebaseDatabase database;
     DatabaseReference reference1, reference2, reference3, reference4, reference5;
+    DatabaseReference year1, year2, year3, year4, year5;
     StorageReference storageReference;
 
     Button stopStoryButton;
@@ -49,6 +50,7 @@ public class MainActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
         messageOutput = findViewById(R.id.textView);
+        year = findViewById(R.id.textView2);
 
         // establishing firebase connection and references
         database = FirebaseDatabase.getInstance();
@@ -57,6 +59,11 @@ public class MainActivity2 extends AppCompatActivity {
         reference3 = database.getReference("message3");
         reference4 = database.getReference("message4");
         reference5 = database.getReference("message5");
+        year1 = database.getReference("year1");
+        year2 = database.getReference("year2");
+        year3 = database.getReference("year3");
+        year4 = database.getReference("year4");
+        year5 = database.getReference("year5");
 
         stopStoryButton = findViewById(R.id.stopStoryButton);
         downloadedPicture = findViewById(R.id.imageView);
@@ -96,6 +103,18 @@ public class MainActivity2 extends AppCompatActivity {
     }
 
     public void story1(View view) {
+        year1.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    year.setText(snapshot.getValue().toString());
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+                    year.setText(error.getMessage());
+                }
+            });
+
         reference1.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -127,6 +146,18 @@ public class MainActivity2 extends AppCompatActivity {
     }
 
     public void story2(View view) {
+        year2.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                year.setText(snapshot.getValue().toString());
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                year.setText(error.getMessage());
+            }
+        });
+
         reference2.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -156,6 +187,18 @@ public class MainActivity2 extends AppCompatActivity {
     }
 
     public void story3(View view) {
+        year3.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                year.setText(snapshot.getValue().toString());
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                year.setText(error.getMessage());
+            }
+        });
+
         reference3.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -185,6 +228,18 @@ public class MainActivity2 extends AppCompatActivity {
     }
 
     public void story4(View view) {
+        year4.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                year.setText(snapshot.getValue().toString());
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                year.setText(error.getMessage());
+            }
+        });
+
         reference4.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -214,6 +269,18 @@ public class MainActivity2 extends AppCompatActivity {
     }
 
     public void story5(View view) {
+        year5.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                year.setText(snapshot.getValue().toString());
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                year.setText(error.getMessage());
+            }
+        });
+
         reference5.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
