@@ -8,4 +8,3 @@ Collaborators: <a href="https://github.com/pnliaskos"> Panagiotis-Nikolaos Liask
 <br>
 Technologies: Java, Firebase, Android Studio 
 <br>
-Status: in progress
