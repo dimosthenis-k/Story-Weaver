@@ -1,6 +1,6 @@
 Android Fairy Tale Text-to-Speech Application
 
-![Android Logo] <img src="https://github.com/devicons/devicon/blob/master/icons/android/android-original.svg" title="android" alt="android" width="40" height="40"/>&nbsp;
+!<img src="https://github.com/devicons/devicon/blob/master/icons/android/android-original.svg" title="android" alt="android" width="40" height="40"/>&nbsp;
 
 In this enchanting tale of technological magic, we introduce an Android Fairy Tale Text-to-Speech application that brings stories to life with the power of Java, Firebase, and Android Studio.
 
